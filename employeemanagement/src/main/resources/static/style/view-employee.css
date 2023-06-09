@@ -1,6 +1,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    color-scheme: dark white;
 }
 
 html {
@@ -8,7 +9,7 @@ html {
 }
 
 header {
-    background-color: rgb(5, 138, 190);
+    background-image: linear-gradient(45deg, #333, #222);
     color: #fff;
     padding: 20px 10px;
 }
@@ -24,8 +25,12 @@ main section {
     gap: 2rem;
 }
 
+main section .button-container {
+    text-align: right;
+}
+
 main section .add-btn {
-    background-color: rgb(3, 174, 242);
+    background-color: rgb(4, 39, 53);
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -33,6 +38,12 @@ main section .add-btn {
     text-transform: uppercase;
     padding: 15px 20px;
     border-radius: 10px;
+    box-shadow: 0 0 5px rgb(59, 62, 63, .7);
+    transition: .5s;
+
+}
+
+main section .add-btn:hover {
     box-shadow: 0 0 10px rgb(5, 138, 190);
 }
 
@@ -43,22 +54,24 @@ main section .add-btn {
 }
 
 .card-container .card {
-    box-shadow: 0 0 10px rgb(5, 138, 190);
+    box-shadow: 0 0 5px rgb(5, 138, 190);
     border-radius: 10px;
+    transition: 0.5s;
 }
+
+.card-container .card:hover {
+    scale: 1.01;
+}
+
 .card-container .card .card-header {
     overflow: hidden;
 }
 
-.card-container .card .card-header img{
+.card-container .card .card-header img {
     width: 100%;
-    transition: 1s;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-}
-
-.card-container .card .card-header img:hover {
-    scale: 1.1;
+    transition: 1s;
 }
 
 .card-container .card .card-body {
@@ -70,10 +83,19 @@ main section .add-btn {
     gap: 5px;
 }
 
+.card-container .card .card-body h2 {
+    color: #f1f1f1;
+}
+
+.card-container .card .card-body h4 {
+    color: #e1e1e1;
+}
+
 .card-container .card .card-body p {
     text-align: center;
     height: 115px;
     overflow-y: auto;
+    color: #c1c1c1;
 }
 
 .card-container .card .card-body p::-webkit-scrollbar {
@@ -81,11 +103,11 @@ main section .add-btn {
 }
 
 .card-container .card .card-body p::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #010101;
 }
 
 .card-container .card .card-body p::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #f1f1f1;
 }
 
 .card-container .card .card-footer {
@@ -93,7 +115,7 @@ main section .add-btn {
     display: flex;
     justify-content: space-between;
 }
- 
+
 .card-container .card .card-footer a {
     text-decoration: none;
     font-weight: 600;
@@ -101,14 +123,25 @@ main section .add-btn {
     text-transform: uppercase;
     padding: 5px 40px;
     border-radius: 100px;
+    transition: .5s;
 }
 
 .card-container .card .card-footer a:first-child {
-    border: 1px solid rgb(3, 174, 242);
-    color: #000;
+    border: 1px solid rgb(1, 51, 70);
+}
+
+.card-container .card .card-footer a:first-child:hover {
+    background-color: rgb(1, 51, 70);
+    color: #fff;
+    box-shadow: 0 0 5px rgb(25, 167, 223);
 }
 
 .card-container .card .card-footer a:last-child {
-   border: 1px solid rgb(244, 7, 189);
-    color: #000;
+    border: 1px solid rgb(130, 6, 101);
+}
+
+.card-container .card .card-footer a:last-child:hover {
+    background-color: rgb(130, 6, 101);
+    color: #fff;
+    box-shadow: 0 0 5px rgb(244, 7, 189);
 }

@@ -58,4 +58,11 @@ public class EmployeeController {
         return "redirect:/";
     }
 
+    @GetMapping("/remove-employee")
+    public String removeEmployee(@RequestParam String id) {
+        employeeService.removeEmployeeById(id);
+
+        return "redirect:/";
+    }
+
 }

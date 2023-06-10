@@ -31,7 +31,7 @@
                         <p th:text="${employee.description}"></p>
                     </div>
                     <div class="card-footer">
-                        <a href="#">Update</a>
+                        <a th:href="'/update-employee?id=' + ${employee.id}">Update</a>
                         <a href="#" th:attr="onclick=|onDelete('${employee.id}')|">Delete</a>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 package org.jt.employeemanagement.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.jt.employeemanagement.model.Employee;
 
@@ -19,4 +20,6 @@ public interface EmployeeService {
     List<Employee> getEmployees();
 
     void removeEmployeeById(String id);
+
+    Optional<Employee> employeeById(String id);
 }

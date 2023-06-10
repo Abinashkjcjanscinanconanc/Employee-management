@@ -32,7 +32,8 @@ public class EmployeeController {
     }
 
     @GetMapping("/add-employee")
-    public String addEmployee() {
+    public String addEmployee(Model model) {
+        model.addAttribute("employee", new Employee());
         return "add-employee";
     }
 
@@ -65,4 +66,11 @@ public class EmployeeController {
         return "redirect:/";
     }
 
+    @GetMapping("/update-employee")
+    public String updateEmployee(@RequestParam String id, Model model) {
+        var employee = employeeService.employeeById(id).orElse(new Employee());
+        model.addAttribute("employee", employee);
+
+        return "add-employee";
+    }
 }

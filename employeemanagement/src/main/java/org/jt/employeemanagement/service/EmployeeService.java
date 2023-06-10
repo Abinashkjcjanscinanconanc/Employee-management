@@ -17,4 +17,6 @@ public interface EmployeeService {
     void saveEmployee(Employee employee);
 
     List<Employee> getEmployees();
+
+    void removeEmployeeById(String id);
 }

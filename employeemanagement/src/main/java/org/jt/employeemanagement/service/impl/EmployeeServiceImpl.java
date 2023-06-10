@@ -1,6 +1,7 @@
 package org.jt.employeemanagement.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.jt.employeemanagement.model.Employee;
 import org.jt.employeemanagement.repository.EmployeeRepository;
@@ -27,6 +28,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public void removeEmployeeById(String id) {
         employeeRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Employee> employeeById(String id) {
+        return employeeRepository.findById(id);
     }
 
 }
